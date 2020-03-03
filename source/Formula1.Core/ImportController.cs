@@ -21,7 +21,7 @@ namespace Formula1.Core
         /// </summary>
         public static IEnumerable<Race> LoadRacesFromRacesXml()
         {
-            throw new NotImplementedException();
+            return null;
         }
 
         /// <summary>
