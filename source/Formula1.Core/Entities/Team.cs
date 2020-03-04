@@ -6,6 +6,12 @@ namespace Formula1.Core.Entities
 {
     public class Team : ICompetitor
     {
-        public string Name { get; }
+        public string Name { get; set; }
+
+        public string Nationality { get; set; }
+        // public ICollection<Driver> Drivers { get; set; }
+
+        public override string ToString() => $"{Name} {Nationality}";
+
     }
 }
