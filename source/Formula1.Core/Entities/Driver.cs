@@ -13,7 +13,7 @@ namespace Formula1.Core.Entities
 
         public override string ToString()
         {
-            return Firstname + " " + Lastname;
+            return Lastname + " " + Firstname;
         }
     }
 }

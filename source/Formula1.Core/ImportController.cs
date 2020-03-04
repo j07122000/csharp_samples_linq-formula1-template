@@ -60,7 +60,7 @@ namespace Formula1.Core
             var xElement = XDocument.Load(racesPath).Root;
             if (xElement != null)
             {
-                result = xElement.Element("Race").Elements("ResultsList").Elements("Result")
+                result = xElement.Elements("Race").Elements("ResultsList").Elements("Result")
                     .Select(result => new Result
                     {
                         Race = GetRace(result, races),
@@ -107,7 +107,7 @@ namespace Formula1.Core
             if (inList == default(Driver))
             {
                 drivers.Add(driver);
-
+                inList = driver;
             }
 
 
