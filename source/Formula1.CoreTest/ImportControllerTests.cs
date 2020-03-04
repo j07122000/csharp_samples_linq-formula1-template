@@ -44,13 +44,13 @@ namespace Formula1.CoreTest
             // Sortiert nach der Rennnummer
             var results = ImportController.LoadResultsFromXmlIntoCollections().ToList();
             var verstappen = results
-                        .Where(s => s.Driver.Lastname.Equals("Verstappen"))
+                        .Where(s => s.Driver.Lastname.Contains("Verstappen"))
                         .OrderBy(s => s.Race.Number)
                         .ToArray();
 
-            Assert.AreEqual(16, verstappen.Length);
-            Assert.AreEqual(3, verstappen[0].Position);
-            Assert.AreEqual(4, verstappen[15].Position);
+            Assert.AreEqual(15, verstappen.Length);
+            Assert.AreEqual(5, verstappen[0].Position);
+            Assert.AreEqual(1, verstappen[14].Position);
         }
     }
 }
